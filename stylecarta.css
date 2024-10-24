@@ -1,0 +1,128 @@
+/* Estilos generales para todo el cuerpo */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #ffe6e6; /* Fondo con un tono rosado suave */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden; /* Evita scroll horizontal */
+    overflow-y: auto;   /* Permite el scroll vertical */
+    background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #fff0f5; /* Fondo rosa claro */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 15px rgba(255, 105, 180, 0.2); /* Sombra en tono rosa */
+    max-width: 800px;
+    text-align: justify;
+    margin: 20px;
+    border: 2px solid #ff69b4; /* Borde rosa fuerte */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Detalles decorativos - corazones flotantes */
+.container::before {
+    content: '❤';
+    font-size: 100px;
+    color: rgba(255, 182, 193, 0.3); /* Corazones transparentes */
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    animation: float 5s ease-in-out infinite;
+}
+.container::after {
+    content: '❤';
+    font-size: 80px;
+    color: rgba(255, 182, 193, 0.3);
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    animation: float 7s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Título */
+h1 {
+    color: #ff69b4; /* Rosa fuerte */
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive; /* Fuente cursiva para un toque romántico */
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+/* Párrafos con espaciado */
+p {
+    line-height: 1.8;
+    margin: 15px 0;
+    color: #ff1493; /* Un tono rosado fuerte para los textos */
+}
+
+/* Firma */
+.firma {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: #c71585;
+}
+
+/* Media Queries para pantallas pequeñas como teléfonos móviles */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        display: block;
+    }
+    
+    .container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .firma {
+        font-size: 1em;
+    }
+}
+
+/* Media Queries para pantallas más pequeñas de hasta 480px (teléfonos muy pequeños) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+}

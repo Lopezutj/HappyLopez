@@ -1,0 +1,82 @@
+/* Estilos generales */
+body {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para móviles */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+/* Estilo para centrar el icono */
+.horizontal-icon {
+    transform: rotate(90deg); /* Girar el ícono 90 grados */
+    font-size: 64px; /* Tamaño del ícono */
+    margin: 0 10px; /* Espaciado alrededor del ícono */
+}
+
+/* Estilo para el botón */
+.zoom-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #28a745; /* Color de fondo de Bootstrap para success */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Transición suave */
+    animation: zoom 1.5s infinite alternate; /* Efecto de zoom */
+}
+
+/* Animación de zoom */
+@keyframes zoom {
+    0% {
+        transform: scale(1); /* Tamaño normal */
+    }
+    100% {
+        transform: scale(1.1); /* Aumenta el tamaño a 1.1 */
+    }
+}
+
+header {
+    margin-bottom: 20px; /* Espacio entre el encabezado y el botón */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: teal;
+    color: white;
+    transition: background-color 0.3s; /* Añade transición suave para el hover */
+}
+
+button:hover {
+    background-color: darkcyan;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 600px) {
+    button {
+        width: 80%; /* Botón más ancho en móviles */
+        font-size: 18px; /* Fuente ligeramente más pequeña */
+    }
+
+    header h1 {
+        font-size: 24px; /* Tamaño del encabezado más pequeño */
+    }
+}
+
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 20px; /* Aún más pequeño en pantallas muy estrechas */
+    }
+
+    button {
+        font-size: 16px; /* Fuente más pequeña para el botón */
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio - Felicidad en el Canvas</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/styleindex.css">
+</head>
+<body class="bg-light text-center">
+    <header class="bg-info text-white py-5">
+        <h1>
+            <i class="fas fa-mobile-alt horizontal-icon"></i>
+            ¡Por favor pon el teléfono en Horizontal!
+            <i class="fas fa-mobile-alt horizontal-icon"></i>
+        </h1>
+    </header>
+    <main class="container mt-5">
+        <p class="lead">Para disfrutar mejor de la experiencia, coloca tu teléfono en posición horizontal.</p>
+        <button onclick="iniciar()" class="btn zoom-button btn-lg">Iniciar</button>
+    </main>
+
+    <script>
+        function iniciar() {
+            window.location.href = "/canvas.html"; // Cambia "Canvas.html" por el nombre de tu archivo de canvas
+        }
+    </script>
+    <!-- Enlace a Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
